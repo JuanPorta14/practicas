@@ -1,0 +1,146 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Montserrat', sans-serif; 
+    font-weight: 300;
+    
+}
+:root{
+    --light-blue: #18f;
+    --light-blue-t: #18f9;
+    --black: #000;
+    --white: #fff;
+    --grey-t: #3337;
+    --grey: #333
+}
+
+ul{
+    list-style: none;
+}
+button{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.title-container{
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+    height: 90px;
+}
+
+
+.invisible{
+    position: relative;
+    width: 75px;
+    height: 50px;
+    border-bottom:3px solid var(--light-blue);
+    border-top: 3px solid var(--light-blue);
+    left: calc(50% - 25px);
+    bottom: 72px;
+}
+
+.card{
+    max-width: 400px;
+    border: var(--grey-t) 1px solid;
+    box-shadow: 9px 9px 40px var(--grey) ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+    padding: 10px;
+    box-shadow: 1px ;
+}
+
+.information{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.person{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.name{
+    font-size: medium;
+    font-weight: 500;
+    color: var(--black);
+    padding: 0;
+    margin-bottom: 0;
+}
+.job{
+    font-weight: 700;
+    color: var(--light-blue-t);
+    font-size: small;
+    margin-top: 5px;
+}
+
+.description{
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    color: #000a;
+    margin-top: 10px;
+}
+.information img{
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.bola{
+    font-family: 'Permanent Marker', cursive;
+    font-size: 40px;
+    position: relative;
+    display: flex;
+    width: 50px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    background: var(--light-blue);
+    border-radius: 50%;
+    box-shadow: 4px 3px 0px 0px var(--white);
+    top: 50px;
+    left: -70px;
+    color: var(--white);
+}
+
+.bola label{
+    position: relative;
+    left: -2px;
+    top: 2px;
+    
+}
+
+.flechas{
+    display: flex;
+    flex-direction: row;
+}
+
+.izq{ 
+    clip-path: polygon(50% 0%, 25% 50%, 50% 100%, 0% 50%);
+    background:var(--light-blue);
+    width: 30px;
+    height: 30px;
+}
+
+.der{
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 75% 50%);
+    background:var(--light-blue);
+    width: 30px;
+    height: 30px;
+}
