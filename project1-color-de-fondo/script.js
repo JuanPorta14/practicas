@@ -141,22 +141,42 @@ const colorName = [
     "Yellow",
     "YellowGreen",
 ];
+
+let format = "hex"
 const btn = document.querySelector(".btn");
 const colorInfo = document.querySelector(".bck-color")
-const text = document.querySelector(".texto");
+const text = document.querySelector(".text");
 const hex = document.querySelector(".hex");
 
-let color = btn.addEventListener("click", () => {
-    const chars = "123456789ABCDEF";
-    let color = "#"
-    for (let i = 0; i < 6; i++){
-        let randomChar = chars[Math.round(Math.random() * (chars.length - 1) )];
-        color += randomChar;
+text.addEventListener("click", () => {
+    format = "text"; 
+    change();
+})
+hex.addEventListener("click", () => {
+    format = "hex"; 
+    change()
+})
 
-    }
-    document.body.style.background = color;
-    colorInfo.innerHTML = color;
-    colorInfo.style.color = color;
-});
+btn.addEventListener("click", change);
 
+
+function change() {
+    if (format === "hex") {
+        const chars = "123456789ABCDEF";
+        let color = "#"
+        for (let i = 0; i < 6; i++){
+            let randomChar = chars[Math.round(Math.random() * (chars.length - 1) )];
+            color += randomChar;
+    
+        }
+        document.body.style.background = color;
+        colorInfo.innerHTML = color;
+        colorInfo.style.color = color;
+        }
+        else{
+            const color = colorName[Math.round(Math.random() * (colorName.length - 1))];
+            colorInfo.innerHTML = color;
+            document.body.style.background = color;
+        }
+}
 
