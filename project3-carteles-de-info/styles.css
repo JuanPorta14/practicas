@@ -18,6 +18,7 @@ body{
     --white: #fff;
     --grey-t: #3337;
     --grey: #333
+
 }
 
 ul{
@@ -41,12 +42,11 @@ button{
     border-bottom:3px solid var(--light-blue);
     border-top: 3px solid var(--light-blue);
     left: calc(50% - 25px);
-    bottom: 72px;
+    bottom: 74px;
 }
 
 .card{
     max-width: 400px;
-    border: var(--grey-t) 1px solid;
     box-shadow: 9px 9px 40px var(--grey) ;
     display: flex;
     flex-direction: column;
@@ -94,6 +94,7 @@ button{
     font-size: 15px;
     color: #000a;
     margin-top: 10px;
+    min-height: 70px;
 }
 .information img{
     border-radius: 50%;
@@ -132,15 +133,37 @@ button{
 }
 
 .izq{ 
-    clip-path: polygon(50% 0%, 25% 50%, 50% 100%, 0% 50%);
+    clip-path: polygon(50% 0%, 40% 50%, 50% 100%, 0% 50%);
     background:var(--light-blue);
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
 }
 
 .der{
-    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 75% 50%);
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 60% 50%);
     background:var(--light-blue);
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
+}
+
+.random{
+    background: var(--light-blue);
+    border: var(--light-blue-t) 1px solid;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    transform: scale(1);
+    transition: 1s;
+    color: var(--white);
+   
+}
+
+.random:hover{
+    transform: scale(.95);
+    
+}
+
+.random:active{
+    transform: scale(.85);
+    transition: .5s;
 }
