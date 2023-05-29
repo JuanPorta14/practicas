@@ -176,6 +176,7 @@ function change() {
         else{
             const color = colorName[Math.round(Math.random() * (colorName.length - 1))];
             colorInfo.innerHTML = color;
+            colorInfo.style.color = color;
             document.body.style.background = color;
         }
 }
