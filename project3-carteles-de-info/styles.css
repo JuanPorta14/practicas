@@ -130,6 +130,7 @@ button{
 .flechas{
     display: flex;
     flex-direction: row;
+    cursor: pointer;
 }
 
 .izq{ 
@@ -137,6 +138,7 @@ button{
     background:var(--light-blue);
     width: 50px;
     height: 50px;
+    transition: .3s;
 }
 
 .der{
@@ -144,6 +146,17 @@ button{
     background:var(--light-blue);
     width: 50px;
     height: 50px;
+    transition: .3s;
+}
+
+.izq:hover,
+.der:hover{
+    transform: scale(.90);
+}
+
+.izq:active,
+.der:active{
+    transform: scale(.80);
 }
 
 .random{
@@ -155,6 +168,7 @@ button{
     transform: scale(1);
     transition: 1s;
     color: var(--white);
+    cursor: pointer;
    
 }
 

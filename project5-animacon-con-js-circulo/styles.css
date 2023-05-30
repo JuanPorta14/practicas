@@ -53,7 +53,7 @@ body{
   clip-path: circle(120%);
   border-top-right-radius: 52px;
   font-size: 16px;
-  transition: .4s;
+  transition: .4 s;
   box-shadow: 5px 5px 10px #111 ;
 }
 

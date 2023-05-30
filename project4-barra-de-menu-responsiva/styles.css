@@ -3,12 +3,18 @@
     font-family: 'Montserrat', sans-serif;  
 }
 
+:root{
+    --cian: #4bc;
+    --black: #000;
+    --grey: #ccc;
+}
+
 nav{
     width: 100vw;
     height: 80px;
-    box-shadow: 0 7px 10px var(--cian);
+    box-shadow: 0 3px 10px var(--grey);
     display: flex;
-
+    position: fixed;
 }
 
 body{
@@ -19,13 +25,10 @@ ul{
     padding: 0;
 }
 
-:root{
-    --cian: #4bc;
-    --black: #000;
-}
+
 .nav-left{
     display: flex;
-    justify-content: start;
+    justify-content: center;
     align-items: center;
     width: 50%;
     height: 100%;
@@ -35,9 +38,15 @@ ul{
     width: 50%;
     height: 100%;
     display: grid;
-    grid-template-columns: repeat(5,1fr);
     justify-content: center;
     align-items: center;
+    grid-template-columns: repeat(4, .2fr);
+}
+
+.nav-right li{
+    margin: 0 10px 0 10px;
+    display: inline-block;
+    font-weight: 700;
 }
 
 a:active,a:link,a:visited{
@@ -55,7 +64,6 @@ a:active,a:link,a:visited{
 
 .marca{
     font-size: 40px;
-    margin-left: 60px;
     user-select: none;
 }
 
@@ -68,11 +76,69 @@ a:active,a:link,a:visited{
 
 .side-bar{
     display: none;
+    width: 50%;
+    height: calc(100vh - 80px);
+    box-shadow: 3px 0 10px var(--grey);
+}
+.logo{
+    height: 30px;
+    display: none;
+    width:25px;
 }
 
-@media(max-widht: 640px) {
+@media(max-width: 700px) {
     .nav-right{
         display: none;
     }
+    .nav-left{
+        width: 100%;
+        display: grid;
+        grid-template-columns: .15fr .75fr .15fr;
+        justify-items: center;
+    }
+
+    .marca{
+        margin: 0;
+        font-size: 35px;
+        align-self: center;
+    }
+
+    .logo{
+        display: inline-block;
+
+    }
+    .side-bar{
+        display: grid;
+        margin-top: 80px;
+        position: absolute;
+        grid-template-rows: 1fr 1fr;
+        flex-direction: column;
+        transform: translate(-110%);
+        transition: 1s;
+    }
+
+    .sidebar-links{
+        display: grid;
+        grid-template-rows: repeat(5, 1fr);
+        justify-items: start;
+    }
+
+    .sidebar-links li {
+        margin-left: 50px;
+    }
+
+    .animacion{
+        transform: translate(0%);
+        transition: 1s;
+    }
+
+    .sidebar-info{
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        align-items: center;
+    }
+
+    
 }
 
