@@ -114,7 +114,7 @@ a:active,a:link,a:visited{
         grid-template-rows: 1fr 1fr;
         flex-direction: column;
         transform: translate(-110%);
-        transition: 1s;
+        transition: .3s;
     }
 
     .sidebar-links{
@@ -129,7 +129,7 @@ a:active,a:link,a:visited{
 
     .animacion{
         transform: translate(0%);
-        transition: 1s;
+        transition: .3s;
     }
 
     .sidebar-info{
@@ -138,7 +138,36 @@ a:active,a:link,a:visited{
         justify-content: end;
         align-items: center;
     }
+    .info{
+        color: #999;
+    }
 
+    .logo:hover{
+        animation: balanceo 1s ease-in-out infinite;
+    }
     
+    @keyframes balanceo {
+        0%{
+            transform: rotate(0deg);   
+        }
+        16%{
+            transform: rotate(-15deg);  
+        }
+        33%{
+            transform: rotate(15deg);  
+        }
+        49%{
+            transform: rotate(-15deg);  
+        }
+        65%{
+            transform: rotate(15deg);  
+        }
+        81%{
+            transform: rotate(-15deg);  
+        }
+        100%{
+            transform: rotate(0);
+        }
+    }
 }
 
